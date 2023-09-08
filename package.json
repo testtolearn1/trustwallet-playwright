@@ -1,0 +1,20 @@
+{
+  "name": "trustwallet-playwright",
+  "version": "1.0.0",
+  "description": "Testcases for Trust wallet setup",
+  "main": "index.js",
+  "scripts": {
+    "runTestHeaded": "npx playwright test e2e/trustwalletextensionsetup.spec.js  --headed",
+    "runTestInRuner": "npx playwright test e2e/trustwalletextensionsetup.spec.js  --headed --ui"
+  },
+  "keywords": ["playwright","crx extractor","javascript","trustwallet"],
+  "author": "Divya Gupta",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.37.1",
+    "clipboardy": "^3.0.0"
+    },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
