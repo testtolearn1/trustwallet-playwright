@@ -15,4 +15,4 @@ jobs:
         run: |
           npm install
           npx playwright install
-          npx playwright test tests/e2e/specs/wallet.spec.ts --project=chromium
+          npx playwright test e2e/trustwalletextensionsetup.spec.js --project=chromium
