@@ -1,0 +1,20 @@
+name: Run Playwright Tests on divya server
+
+on:
+  repository_dispatch:
+    types: [run-playwright-tests]
+
+jobs:
+  deploy-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+
+      - name: Run Playwright tests
+        run: |
+            npm install playwright
+            npx playwright test e2e/trustwalletextensionsetup.spec.js --project=chromium
+          EOF
