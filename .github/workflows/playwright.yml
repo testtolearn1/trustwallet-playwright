@@ -1,4 +1,4 @@
-name: Run Playwright Tests on divya server
+name: Run Playwright Tests on Remote Server
 
 on:
   repository_dispatch:
@@ -14,6 +14,7 @@ jobs:
 
       - name: Run Playwright tests
         run: |
-            npm install playwright
-            npx playwright test e2e/trustwalletextensionsetup.spec.js --project=chromium
+            npm install
+            npx playwright install
+            npx playwright test tests/e2e/specs/wallet.spec.ts --project=chromium
           EOF
