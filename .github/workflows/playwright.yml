@@ -11,10 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
       - name: Run Playwright tests
         run: |
-            npm install
-            npx playwright install
-            npx playwright test tests/e2e/specs/wallet.spec.ts --project=chromium
-          EOF
+          npm install
+          npx playwright install
+          npx playwright test tests/e2e/specs/wallet.spec.ts --project=chromium
